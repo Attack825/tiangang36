@@ -8,26 +8,44 @@
 
 void draw() {
 
+	setlinecolor(BLACK);
+	setfillcolor(WHITE);
+	fillrectangle(0, 0, 400, 400);
+
+	setlinecolor(BLACK);
+	line(0, 0, 300, 300);
+	line(300, 300, 100, 300);
+	line(400, 0, 0, 400);
+	line(300, 100, 400, 200);
+	line(400, 200, 200, 400);
+
+	setfillcolor(GREEN);
+	floodfill(2, 1, BLACK);
+
+	setfillcolor(BLUE);
+	floodfill(100, 399, BLACK);
+
+	setfillcolor(RGB(255, 165, 0));
+	floodfill(1, 2, BLACK);
+
+	setfillcolor(RGB(255, 255, 0));//黄色
+	floodfill(201, 200, BLACK);
+
+	setfillcolor(RGB(255, 0, 0));//红色
+	floodfill(399, 399, BLACK);
+
+	setfillcolor(RGB(128, 0, 128));//紫色
+	floodfill(200, 201, BLACK);
+
+	setfillcolor(RGB(165, 42, 42));//棕色
+	floodfill(399, 101, BLACK);
 
 
 }
 
 
-
-int main()
+void demo()
 {
-
-	// 创建大小为 800 * 600 的绘图窗口
-	initgraph(800, 600);
-
-	// 设置原点 (0, 0) 为屏幕中央（Y轴默认向下为正）
-	setorigin(400, 300);
-
-	// 使用白色填充背景
-	setbkcolor(WHITE);
-	cleardevice();
-
-
 	setlinecolor(BLACK);
 	line(15, 15, 50, 50);   // 绘制直线
 	line(50, 50, 15, 100);
@@ -37,8 +55,26 @@ int main()
 	setlinecolor(BLACK);     //设置线条颜色
 	fillcircle(100, 100, 6);//填充圆形图案
 
-	setfillcolor(YELLOW);				// 身体填充蓝色CK);
+	setfillcolor(YELLOW);				// 身体填充黄色);
 	floodfill(30, 50, BLACK, 0); // 填充颜色
+}
+
+
+int main()
+{
+
+	// 创建大小为 800 * 600 的绘图窗口
+	initgraph(1000, 1000);
+
+	// 设置原点 (0, 0) （Y轴默认向下为正）
+	setorigin(300, 300);
+
+	// 使用白色填充背景
+	setbkcolor(WHITE);
+	cleardevice();
+
+	draw();
+
 
 
 	Sleep(2000);//定时2s
