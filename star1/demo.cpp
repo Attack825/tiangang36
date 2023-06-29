@@ -7,19 +7,42 @@
 //天魁星，绘制七巧版图案
 
 void draw() {
-	
+
+
+
 }
 
 
 
 int main()
 {
-	initgraph(640, 480);	// 创建绘图窗口，大小为 640x480 像素
-	circle(200, 200, 100);	// 画圆，圆心(200, 200)，半径 100
-	
-	
-	
-	_getch();				// 按任意键继续
+
+	// 创建大小为 800 * 600 的绘图窗口
+	initgraph(800, 600);
+
+	// 设置原点 (0, 0) 为屏幕中央（Y轴默认向下为正）
+	setorigin(400, 300);
+
+	// 使用白色填充背景
+	setbkcolor(WHITE);
+	cleardevice();
+
+
+	setlinecolor(BLACK);
+	line(15, 15, 50, 50);   // 绘制直线
+	line(50, 50, 15, 100);
+	line(15, 100, 15, 15);
+
+	setfillcolor(BLUE);      // 设置填充颜色
+	setlinecolor(BLACK);     //设置线条颜色
+	fillcircle(100, 100, 6);//填充圆形图案
+
+	setfillcolor(YELLOW);				// 身体填充蓝色CK);
+	floodfill(30, 50, BLACK, 0); // 填充颜色
+
+
+	Sleep(2000);//定时2s
+	//_getch();				// 按任意键继续
 	closegraph();			// 关闭绘图窗口
 	return 0;
 
