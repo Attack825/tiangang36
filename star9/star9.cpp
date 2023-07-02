@@ -144,6 +144,7 @@ int main()
 	setorigin(500, 500);
 	// 使用白色填充背景
 	setbkcolor(WHITE);
+	cleardevice();
 	BeginBatchDraw();		// 开启批量绘图
 	while (true)
 	{
