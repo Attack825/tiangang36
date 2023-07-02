@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <math.h>
 #include<string>
-//C语言天罡三十六题，基础九题
+//C语言天罡三十六题，进阶九题
 //天英星
 //任务： 天富星
 //任务：绘制下面两张传说中的视觉错觉图片
